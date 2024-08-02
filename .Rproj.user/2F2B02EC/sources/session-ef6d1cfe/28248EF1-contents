@@ -1,0 +1,274 @@
+---
+format: 
+  markdown_github:
+    date: last-modified
+    date-format: "[Last Updated on] YYYY-MM-DD"
+    csl: plos.csl
+    link-citations: true
+    
+output-file: README.md
+
+# References bib file
+bibliography: [references.bib,packages.bib]  
+
+# Don't show the code in the output
+execute: 
+  echo: false
+  message: false
+  warning: false
+---
+# Supplementary Material
+
+This repository contains the supplementary tables as `csv` files for: 
+**Comparative analysis of transcriptomic and proteomic expression reveals distinct molecular signatures between two non-small cell lung cancer subtypes**.
+
+The column names and contents of the `csv` files in the `tables` folder 
+are described below.
+
+```{r}
+#|label: set-up
+#| message: false
+library(tidyverse)
+library(janitor)
+#library(flextable)
+library(huxtable)
+tbl_list <- tibble(File = list.files("tables",pattern="*.csv$"))
+```
+
+## Transcript quantification and gene counts
+
+Transcripts were quantified by genomic alignments using HISAT2 (version 2.2.1) [@kim2019] and 
+featureCounts (version 2.0.6) [@liao2013], and by transcript classification using 
+Salmon (version 1.10.3) [@srivastava2020]. 
+
+### HISAT2
+
+Tables S1-3 contain the gene counts from the HISAT2 alignments estimated by featureCounts. 
+
+```{r}
+#| label: tbl-hisat
+#hisat_tbl <- read_csv("supplementary-tables/Table-S1-Hisat-LUAD-vs-PBMC-counts.csv") |> glimpse()
+tbl_list |> 
+  filter(str_detect(File,"Hisat")) |> 
+  hux() |> 
+  set_bold(row = 1, col = everywhere) |> 
+  set_bottom_border(row = 1, col = everywhere) |> 
+  set_align(1, everywhere, "left") |> 
+  set_bottom_border(final(1), everywhere)
+```
+
++--------------------------------------------------------------------------------------------+---------------------------------------+
+| Column name                                                                                | Description                           |
++============================================================================================+=======================================+
+| `name`                                                                                     | Ensembl gene identifier               |
++--------------------------------------------------------------------------------------------+---------------------------------------+
+| `gene`                                                                                     | HGNC gene symbol                      |
++--------------------------------------------------------------------------------------------+---------------------------------------+
+| `sample_id` the donor id or donor id suffixed with `T` for tumour or `N` for PBMC samples. | mapped read counts from featureCounts |
++--------------------------------------------------------------------------------------------+---------------------------------------+
+
+: HISAT2 Counts Tables Information
+
+### Salmon
+
+Tables S4-6 contain the gene counts from transcript classification by Salmon.
+
+```{r}
+#| label: tbl-samlon
+tbl_list |> 
+  filter(str_detect(File,"Salmon")) |> 
+  hux() |> 
+  set_bold(row = 1, col = everywhere) |> 
+  set_bottom_border(row = 1, col = everywhere) |> 
+  set_align(1, everywhere, "left") |> 
+  set_bottom_border(final(1), everywhere)
+```
+
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| Column name                                                                                | Description                            |
++============================================================================================+========================================+
+| `name`                                                                                     | Ensembl gene identifier                |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `gene`                                                                                     | HGNC gene symbol or Ensembl if missing |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `length`                                                                                   | the length of the target transcript    |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `sample_id` the donor id or donor id suffixed with `T` for tumour or `N` for PBMC samples. | mapped reads counts by Salmon          |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+
+: Salmon Counts Table Information
+
+## Differential gene expression with EdgeR
+
+Differential gene expression (DEG) was estimated using EdgeR and default settings [@edgeR]. Results were filtered for common DEG from both HISAT2 and Salmon counts
+
+Tables S7-9 contain the edgeR outputs.
+
+```{r}
+#| label: tbl-edger
+# read_csv("supplementary-tables/Table-S7-edgeR-DEG-LUAD-vs-PBMC.csv") |> glimpse()
+
+tbl_list |> 
+  filter(str_detect(File,"edgeR")) |> 
+  hux() |> 
+  set_bold(row = 1, col = everywhere) |> 
+  set_bottom_border(row = 1, col = everywhere) |> 
+  set_align(1, everywhere, "left") |> 
+  set_bottom_border(final(1), everywhere)
+```
+
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| Column name                                                                                | Description                            |
++============================================================================================+========================================+
+| `name`                                                                                     | Ensembl gene identifier                |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `gene`                                                                                     | HGNC gene symbol or Ensembl if missing |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `baseMean`                                                                                 | mean read counts                       |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `baseMeanA`                                                                                | mean read count group A                |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `baseMeanB`                                                                                | mean read count group B                |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `foldChange`                                                                               | fold change B/A                        |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `log2FoldChange`                                                                           | log2 fold change B/A                   |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `PValue`                                                                                   | p-value                                |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `PAdj`                                                                                     | Benjamini-Hochbergadjusted p-value     |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `FDR`                                                                                      | False discovery rate                   |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `falsePos`                                                                                 | false discovery counts                 |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| `sample_id` the donor id or donor id suffixed with `T` for tumour or `N` for PBMC samples. | sample Hisat2 read count               |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+
+: edgeR Table information
+
+## Peaks normalised Top 3 peptide intensities
+
+Label free quantification using the Peaks Q module of Peaks Studio [@zhang2012; @lin2013] yielding matrices of protein identifications as quantified by their normalised top 3 peptide intensities.
+
+Tables S10-12 contain normalised top 3 peptide intensities.
+
+```{r}
+#| label: tbl-peaks
+#read_csv("supplementary-tables/Table-S10-Peaks-top3-peptides-intensities-LUAD-vs-NAT.csv") |> glimpse()
+
+tbl_list |> 
+  filter(str_detect(File,"Peaks")) |> 
+  hux() |> 
+  set_bold(row = 1, col = everywhere) |> 
+  set_bottom_border(row = 1, col = everywhere) |> 
+  set_align(1, everywhere, "left") |> 
+  set_bottom_border(final(1), everywhere)
+```
+
++------------------------------------------------------------------------------------------+-----------------------------------------------+
+| Column name                                                                              | Description                                   |
++==========================================================================================+===============================================+
+| `protein`                                                                                | protein short name                            |
++------------------------------------------------------------------------------------------+-----------------------------------------------+
+| `gene`                                                                                   | HGNC gene symbol                              |
++------------------------------------------------------------------------------------------+-----------------------------------------------+
+| `sample_id` the donor id or donor id suffixed with `T` for tumour or `N` for NAT samples | Normalised top 3 peptide intensity from Peaks |
++------------------------------------------------------------------------------------------+-----------------------------------------------+
+
+: Peaks normalised top 3 peptide intensities Table information
+
+## Differential protein expression with DEqMS
+
+The normalised top 3 peptide intensities were filtered to remove any proteins for which there were more than two missing values across the samples. Differential protein expression (DEP) was then calculated with DEqMS using the default steps [@deqms].
+
+Tables S13-15 contain the outputs of DEqMS.
+
+```{r}
+#| label: tbl-deqms
+#read_csv("supplementary-tables/Table-S13-DEqMS-DEP-LUAD-vs-NAT.csv") |> glimpse()
+
+tbl_list |> 
+  filter(str_detect(File,"DEqMS")) |> 
+  hux() |> 
+  set_bold(row = 1, col = everywhere) |> 
+  set_bottom_border(row = 1, col = everywhere) |> 
+  set_align(1, everywhere, "left") |> 
+  set_bottom_border(final(1), everywhere)
+```
+
+| Column name    | Description                                    |
+|----------------|------------------------------------------------|
+| `logFC`        | log2 fold change between two groups            |
+| `AveExpr`      | the mean of the log2 ratios across all samples |
+| `t`            | Limma t-values                                 |
+| `P.Value`      | Limma p-values                                 |
+| `adj.P.Val`    | BH method adjusted Limma p-values              |
+| `B`            | Limma B values                                 |
+| `gene`         | HGNC gene symbol                               |
+| `count`        | peptide count values                           |
+| `sca.t`        | DEqMS t-statistics                             |
+| `sca.P.Value`  | DEqMS p-values                                 |
+| `sca.adj.pval` | BH method adjusted DEqMS p-values              |
+| `protein`      | protein short name                             |
+
+: DEqMS Table information
+
+## Functional analysis with g:Profiler
+
+Functional enrichment analysis used g:Profiler [@kolberg2020] using default settings for homo sapiens modified to exclude GO electronic annotations. Gene ids were used as inputs for DEGs and protein ids for DEPs.
+
+Tables S16-23 contain the g:Profiler outputs.
+
+```{r}
+#| label: tbl-gprofiler
+#read_csv("supplementary-tables/Table-S16-gprofiler-DEG-LUAD-vs-PBMC.csv") |> glimpse()
+
+tbl_list |> 
+  filter(str_detect(File,"gprofiler")) |> 
+  hux() |> 
+  set_bold(row = 1, col = everywhere) |> 
+  set_bottom_border(row = 1, col = everywhere) |> 
+  set_align(1, everywhere, "left") |> 
+  set_bottom_border(final(1), everywhere)
+```
+
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| Column name             | Description                                                                                                                                 |
++=========================+=============================================================================================================================================+
+| `query`                 | the name of the input query                                                                                                                 |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `significant`           | indicator for statistically significant results                                                                                             |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `p_value`               | hypergeometric p-value after correction for multiple testing                                                                                |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `term_size`             | number of genes that are annotated to the term                                                                                              |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `query_size`            | number of genes that were included in the query                                                                                             |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `intersection_size`     | the number of genes in the input query that are annotated to the corresponding term                                                         |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `precision`             | the proportion of genes in the input list that are annotated to the function (defined as intersection_size/query_size)                      |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `recall`                | the proportion of functionally annotated genes that the query recovers (defined as intersection_size/term_size)                             |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `term_id`               | unique term identifier                                                                                                                      |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `source`                | the abbreviation of the data source for the term (e.g. GO:BP)                                                                               |
+|                         |                                                                                                                                             |
+| `term_name`             |                                                                                                                                             |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `effective_domain_size` | the total number of genes "in the universe" used for the hypergeometric test                                                                |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `source_order`          | numeric order for the term within its data source                                                                                           |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `parents`               | list of term IDs that are hierarchically directly above the term. For non-hierarchical data sources this points to an artificial root node. |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `evidence_codes`        | a lists of all evidence codes for the intersecting genes between input and the term. The evidences are separated by comma for each gene.    |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| `intersection`          | a comma separated list of genes from the query that are annotated to the corresponding term                                                 |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+: g:Profiler Table information
+
+## References
