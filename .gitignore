@@ -1,3 +1,6 @@
 *.qmd
 *.Rproj
 .Rproj.user
+*.csl
+*.bib
+oac-vs-nat*

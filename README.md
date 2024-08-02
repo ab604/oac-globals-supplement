@@ -13,6 +13,35 @@ This comprises of the materials and methods as a `pdf` and tables as
 The column names and contents of the `csv` files in the `tables` folder
 are described below.
 
+## Patient Information
+
+Table S1 contains the patient information for the 7 donors in this
+study.
+
+                      File                                  
+                    ────────────────────────────────────────
+                      Table-S1-OAC-Patient-Information.csv  
+                    ────────────────────────────────────────
+
+Column names: File
+
+| Column name                | Description                 |
+|----------------------------|-----------------------------|
+| `id`                       | CRUK Accelerator identifier |
+| `sample`                   | Sample identifier           |
+| `occams`                   | OCCAMS identifier           |
+| `age_at_diagnosis`         | Age of patient at diagnosis |
+| `sex`                      | Sex of patient              |
+| `location_of_tumour`       | Location of tumour          |
+| `clinical_t_stage`         | Tumour stage:               |
+| `clinical_nodal_stage`     | Nodal stage:                |
+| `treatment_modality`       |                             |
+| `post_resection_p_t_stage` |                             |
+| `post_resection_p_n_stage` |                             |
+| `wet_weight`               | Tumour sample wet weight    |
+
+Patient information
+
 ## Peaks normalised Top 3 peptide intensities
 
 Label free quantification using the Peaks Q module of Peaks Studio
@@ -20,10 +49,12 @@ Label free quantification using the Peaks Q module of Peaks Studio
 identifications as quantified by their normalised top 3 peptide
 intensities.
 
-Tables S**x** contain normalised top 3 peptide intensities.
+Tables S2 contain normalised top 3 peptide intensities.
 
-                                 File            
-                               ──────────────────
+           File                                                        
+         ──────────────────────────────────────────────────────────────
+           Table-S2-OAC-Peaks-Normalised-Top3-Peptide-Intensities.csv  
+         ──────────────────────────────────────────────────────────────
 
 Column names: File
 
@@ -42,10 +73,12 @@ proteins for which there were more than two missing values across the
 samples. Differential protein expression (DEP) was then calculated with
 DEqMS using the default steps \[[3](#ref-deqms)\].
 
-Tables S**X** contain the output of DEqMS.
+Tables S3 contain the output of DEqMS.
 
-                                 File            
-                               ──────────────────
+                         File                            
+                       ──────────────────────────────────
+                         Table-S3-OAC-DEqMS-Results.csv  
+                       ──────────────────────────────────
 
 Column names: File
 
@@ -73,10 +106,12 @@ using default settings for homo sapiens modified to exclude GO
 electronic annotations. Protein identifiers were used as inputs for
 DEPs.
 
-Tables S**x** contain the g:Profiler outputs.
+Tables S4 contain the g:Profiler outputs.
 
-                                 File            
-                               ──────────────────
+                       File                                
+                     ──────────────────────────────────────
+                       Table-S4-OAC-gProfiler-Results.csv  
+                     ──────────────────────────────────────
 
 Column names: File
 
