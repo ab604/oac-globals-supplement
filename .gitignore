@@ -1,6 +1,7 @@
 *.qmd
 *.Rproj
-.Rproj.user
+.Rproj.user/
+.Rhistory
 *.csl
 *.bib
 oac-vs-nat*

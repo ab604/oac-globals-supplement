@@ -1,8 +1,8 @@
-id,sample,occams,age_at_diagnosis,sex,location_of_tumour,clinical_t_stage,clinical_nodal_stage,treatment_modality,post_resection_p_t_stage,post_resection_p_n_stage,wet_weight
-ACCEL-OAC-01,EN-181-11,OC/SH/006,64,Male,Gastro-Oesophageal junction (Siewert II),2,0,Surgery,1,0,93.1
-ACCEL-OAC-02,EN-216-11,OC/SH/020,74,Male,Lower Oesophagus,2,0,Surgery,3,0,78.8
-ACCEL-OAC-03,EN-430-11,OC/SH/033,78,Male,Lower Oesophagus,3,2,Chemotherapy + Surgery,2,0,11.4
-ACCEL-OAC-04,EN-454-11,OC/SH/038,81,Male,Gastro-Oesophageal junction (Siewert II),3,1,Surgery,3,1,179.8
-ACCEL-OAC-06,EN-711-16,OC/SH/253,68,Male,Lower Oesophagus,3,2,Chemotherapy + Surgery,3,0,198.4
-ACCEL-OAC-07,EN-716-11,OC/SH/255,66,Male,Lower Oesophagus,3,2,Chemotherapy + Surgery,3,2,107.6
-ACCEL-OAC-08,EN-797-18,OC/SH/331,60,Male,Lower Oesophagus,4,2,Chemotherapy + Surgery,3,0,74.9
+donor_id,age_at_diagnosis,sex,location_of_tumour,treatment_modality
+EN-181-11,64,Male,Gastro-Oesophageal junction (Siewert II),Surgery
+EN-216-11,74,Male,Lower Oesophagus,Surgery
+EN-430-11,78,Male,Lower Oesophagus,Chemotherapy + Surgery
+EN-454-11,81,Male,Gastro-Oesophageal junction (Siewert II),Surgery
+EN-711-16,68,Male,Lower Oesophagus,Chemotherapy + Surgery
+EN-716-11,66,Male,Lower Oesophagus,Chemotherapy + Surgery
+EN-797-18,60,Male,Lower Oesophagus,Chemotherapy + Surgery
