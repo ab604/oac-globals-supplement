@@ -1,5 +1,5 @@
 
-Last Updated on 2024-08-02
+Last Updated on 2024-08-03
 
 # Supplementary Material
 
@@ -15,7 +15,7 @@ are described below.
 
 ## Patient Information
 
-Table S1 contains the patient information for the 7 donors in this
+Table S1 contains the patient information for the 7 male donors in this
 study.
 
                       File                                  
@@ -25,20 +25,13 @@ study.
 
 Column names: File
 
-| Column name                | Description                 |
-|----------------------------|-----------------------------|
-| `id`                       | CRUK Accelerator identifier |
-| `sample`                   | Sample identifier           |
-| `occams`                   | OCCAMS identifier           |
-| `age_at_diagnosis`         | Age of patient at diagnosis |
-| `sex`                      | Sex of patient              |
-| `location_of_tumour`       | Location of tumour          |
-| `clinical_t_stage`         | Tumour stage:               |
-| `clinical_nodal_stage`     | Nodal stage:                |
-| `treatment_modality`       |                             |
-| `post_resection_p_t_stage` |                             |
-| `post_resection_p_n_stage` |                             |
-| `wet_weight`               | Tumour sample wet weight    |
+| Column name          | Description                 |
+|----------------------|-----------------------------|
+| `donor_id`           | Donor identifier            |
+| `age_at_diagnosis`   | Age of patient at diagnosis |
+| `sex`                | Sex of patient              |
+| `location_of_tumour` | Location of tumour          |
+| `treatment_modality` | Treatment modality          |
 
 Patient information
 
