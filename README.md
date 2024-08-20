@@ -7,8 +7,8 @@ This repository contains the supplementary information for:
 **Comparative analysis of proteomic expression between oesophageal
 adenocarcinoma and normal adjacent tissue**.
 
-This comprises of the materials and methods as a `pdf` and tables as
-`csv` files.
+This comprises of the materials and methods as a `pdf` in `oac-globals-methods-2024-08-20.pdf` 
+and tables as `csv` files, and Figure S1 below.
 
 The column names and contents of the `csv` files in the `tables` folder
 are described below.
