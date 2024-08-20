@@ -15,12 +15,8 @@ are described below.
 
 ## Figure S1 - Principal Component Analysis
 
-<figure>
 <img src="figures/Figure-S1A-2024-07-18.png"
-data-figcaption="**A** PCA of normalised top 3 peptide intensities of 500 most variable proteins. OAC (red) &amp; NAT (grey). Samples are numbered with donor identifier."
-alt="PCA" />
-<figcaption aria-hidden="true">PCA</figcaption>
-</figure>
+data-figcaption="**A** PCA of normalised top 3 peptide intensities of 500 most variable proteins. OAC (red) &amp; NAT (grey). Samples are numbered with donor identifier." />
 
 <figure>
 <img src="figures/Figure-S1B-2024-07-18.png"
