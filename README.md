@@ -1,5 +1,5 @@
 
-Last Updated on 2024-08-03
+Last Updated on 2024-08-20
 
 # Supplementary Material
 
@@ -12,6 +12,14 @@ This comprises of the materials and methods as a `pdf` and tables as
 
 The column names and contents of the `csv` files in the `tables` folder
 are described below.
+
+## Figure S1 - Principal Component Analysis
+
+<img src="figures/Figure-S1A-2024-07-18.png"
+data-ref-parent="fig-pca" />
+
+<img src="figures/Figure-S1B-2024-07-18.png"
+data-ref-parent="fig-pca" />
 
 ## Patient Information
 
