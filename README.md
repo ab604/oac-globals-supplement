@@ -18,16 +18,13 @@ are described below.
 <figure>
 <img src="figures/Figure-S1A-2024-07-18.png"
 alt="Figure S1 (A) PCA of normalised top 3 peptide intensities of 500 most variable proteins. OAC (red) &amp; NAT (grey). Samples are numbered with donor identifier." />
-<figcaption aria-hidden="true"><strong>Figure S1 (A)</strong> PCA of
-normalised top 3 peptide intensities of 500 most variable proteins. OAC
-(red) &amp; NAT (grey). Samples are numbered with donor
-identifier.</figcaption>
-</figure>
-
-<figure>
+<br>
 <img src="figures/Figure-S1B-2024-07-18.png"
 alt="Figure S1 (B) Scree plot of principal components." />
-<figcaption aria-hidden="true"><strong>Figure S1 (B)</strong> Scree plot
+<figcaption aria-hidden="true">Figure S1 <strong>(A)</strong> PCA of
+normalised top 3 peptide intensities of 500 most variable proteins. OAC
+(red) &amp; NAT (grey). Samples are numbered with donor
+identifier. <strong>(B)</strong> Scree plot
 of principal components.</figcaption>
 </figure>
 
