@@ -219,7 +219,7 @@ g:Profiler Table information
 
 ## NOP58 G95R mutation protein stability prediction
 
-The effect of the G95R mutation on Nucleolar protein 58 **(**NOP58) was
+The effect of the G95R mutation on Nucleolar protein 58 (NOP58) was
 predicted using <a href="#0" style="font-size: 12pt;">DDGun</a>
 ([5](#ref-montanucci2019)).
 
