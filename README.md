@@ -7,8 +7,9 @@ This repository contains the supplementary information for:
 **Comparative analysis of proteomic expression between oesophageal
 adenocarcinoma and normal adjacent tissue**.
 
-This comprises of the materials and methods as a `pdf` and tables as
-`csv` files.
+This comprises of the materials and methods as a `pdf` , tables as `csv`
+files, and the prediction of the effect of the G95R mutation on NOP58
+using DDGun below.
 
 The column names and contents of the `csv` files in the `tables` folder
 are described below.
@@ -217,8 +218,9 @@ g:Profiler Table information
 
 ## NOP58 G95R mutation protein stability prediction
 
-The effect of the G95R mutation on NOP58 was predicted using
-[DDGun](https://folding.biofold.org/ddgun) \[[5](#ref-montanucci2019)\].
+The effect of the G95R mutation on Nucleolar protein 58 **(**NOP58) was
+predicted using <a href="#0" style="font-size: 12pt;">DDGun</a>
+\[[5](#ref-montanucci2019)\].
 
 The output of the prediction using the amino acid sequence is showing
 how G95R decreases the stability of NOP58 is shown below:
@@ -233,9 +235,9 @@ how G95R decreases the stability of NOP58 is shown below:
     STABILITY[SEQ]: Variation of protein stability
 
 |  |  |  |  |  |  |  |  |  |
-|:-----:|:-----:|:--------:|:---:|:----:|:----:|:--------:|:--------:|:----------:|
+|:-----------:|:----:|:-------:|:---:|:---:|:----:|:-------:|:-------:|:---------:|
 | PROTEIN | VARIANT | CONSERVATION | S_KD | S_BL | S_PROF | S_DDG\[SEQ\] | T_DDG\[SEQ\] | STABILITY\[SEQ\] |
-| NOP58 | G95R | 30.1 | 0.3 | 0.107 | -3.440 | -1.222 | -0.5 | Decrease |
+| Nucleolar protein 58 | G95R | 30.1 | 0.3 | 0.107 | -3.440 | -1.222 | -0.5 | Decrease |
 
 ## References
 
