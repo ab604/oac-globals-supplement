@@ -1,5 +1,5 @@
 
-Last Updated on 2024-08-20
+Last Updated on 2024-08-21
 
 # Supplementary Material
 
@@ -7,8 +7,8 @@ This repository contains the supplementary information for:
 **Comparative analysis of proteomic expression between oesophageal
 adenocarcinoma and normal adjacent tissue**.
 
-This comprises of the materials and methods as a `pdf` in `oac-globals-methods-2024-08-20.pdf` 
-and tables as `csv` files, and Figure S1 below.
+This comprises of the materials and methods as a `pdf` and tables as
+`csv` files.
 
 The column names and contents of the `csv` files in the `tables` folder
 are described below.
@@ -16,17 +16,20 @@ are described below.
 ## Figure S1 - Principal Component Analysis
 
 <figure>
+
 <strong>A</strong>
-<img src="figures/Figure-S1A-2024-07-18.png"
-alt="Figure S1 (A) PCA of normalised top 3 peptide intensities of 500 most variable proteins. OAC (red) &amp; NAT (grey). Samples are numbered with donor identifier." />
+<img src="figures/Figure-S1A-2024-07-18.png" alt="Figure S1 (A) PCA of normalised top 3 peptide intensities of 500 most variable proteins. OAC (red) &amp; NAT (grey). Samples are numbered with donor identifier."/>
 <strong>B</strong>
-<img src="figures/Figure-S1B-2024-07-18.png"
-alt="Figure S1 (B) Scree plot of principal components." />
-<figcaption aria-hidden="true">Figure S1 <strong>(A)</strong> PCA of
-normalised top 3 peptide intensities of 500 most variable proteins. OAC
-(red) &amp; NAT (grey). Samples are numbered with donor
-identifier. <strong>(B)</strong> Scree plot
-of principal components.</figcaption>
+<img src="figures/Figure-S1B-2024-07-18.png" alt="Figure S1 (B) Scree plot of principal components."/>
+
+<figcaption aria-hidden="true">
+
+Figure S1 <strong>(A)</strong> PCA of normalised top 3 peptide
+intensities of 500 most variable proteins. OAC (red) & NAT (grey).
+Samples are numbered with donor identifier. <strong>(B)</strong> Scree
+plot of principal components.
+
+</figcaption>
 </figure>
 
 ## Patient Information
@@ -212,6 +215,28 @@ the corresponding term</td>
 
 g:Profiler Table information
 
+## NOP58 G95R mutation protein stability prediction
+
+The effect of the G95R mutation on NOP58 was predicted using
+[DDGun](https://folding.biofold.org/ddgun) \[[5](#ref-montanucci2019)\].
+
+The output of the prediction using the amino acid sequence is showing
+how G95R decreases the stability of NOP58 is shown below:
+
+    PROTEIN: Protein name.
+    VARIANT: Protein mutation.
+    CONSERVATION: Frequencies of the wild-type and mutant residues in the mutated positions.
+    S_KD: Kyte-Doolittle substitution scores (AAINDEX1:KYTJ820101).
+    S_BL: BLOSUM62 substitution score (AAINDEX2:ENS920102).
+    S_DDG[SEQ]: Prediction of the DDG for the single amino acid substitutions.
+    T_DDG[SEQ]: Global DDG for multiple amino acid substitutions.
+    STABILITY[SEQ]: Variation of protein stability
+
+|  |  |  |  |  |  |  |  |  |
+|:-----:|:-----:|:--------:|:---:|:----:|:----:|:--------:|:--------:|:----------:|
+| PROTEIN | VARIANT | CONSERVATION | S_KD | S_BL | S_PROF | S_DDG\[SEQ\] | T_DDG\[SEQ\] | STABILITY\[SEQ\] |
+| NOP58 | G95R | 30.1 | 0.3 | 0.107 | -3.440 | -1.222 | -0.5 | Decrease |
+
 ## References
 
 <span class="csl-left-margin">1.
@@ -236,3 +261,10 @@ Vilo J, Peterson H. gprofiler2 – an R package for gene list functional
 enrichment analysis and namespace conversion toolset g:Profiler.
 F1000Research. 2020;9: 709.
 doi:[10.12688/f1000research.24956.2](https://doi.org/10.12688/f1000research.24956.2)</span>
+
+<span class="csl-left-margin">5.
+</span><span class="csl-right-inline">Montanucci L, Capriotti E, Frank
+Y, Ben-Tal N, Fariselli P. DDGun: an untrained method for the prediction
+of protein stability changes upon single and multiple point variations.
+BMC Bioinformatics. 2019;20.
+doi:[10.1186/s12859-019-2923-1](https://doi.org/10.1186/s12859-019-2923-1)</span>
