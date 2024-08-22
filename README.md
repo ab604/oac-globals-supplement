@@ -3,6 +3,8 @@ Last Updated on 2024-08-22
 
 # Supporting Information
 
+[![](https://zenodo.org/badge/837544982.svg)](https://zenodo.org/doi/10.5281/zenodo.13358758)
+
 This repository contains the supporting information for: **Comparative
 analysis of proteomic expression between oesophageal adenocarcinoma and
 normal adjacent tissue**.
