@@ -10,7 +10,7 @@ analysis of proteomic expression between oesophageal adenocarcinoma and
 normal adjacent tissue**.
 
 This comprises of the materials and methods in
-`oac-globals-methods-2024-08-20.pdf`, Figure S1, Tables S1-S4 as `csv`
+`oac-globals-methods-2024-08-22.pdf`, Figure S1, Tables S1-S4 as `csv`
 files, and the prediction of the effect of the G95R mutation on NOP58
 using DDGun ([1](#ref-montanucci2019)) below.
 
@@ -89,7 +89,9 @@ proteins for which there were more than two missing values across the
 samples. Differential protein expression (DEP) was then calculated with
 DEqMS using the default steps ([4](#ref-deqms)).
 
-Tables S3 contain the output of DEqMS.
+Tables S3 contain the output of DEqMS. A negative `logFC` indicates
+higher expresssion in OAC tissue and a postive `logFC` indicates higher
+expression in NAT.
 
                          File                            
                        ──────────────────────────────────
