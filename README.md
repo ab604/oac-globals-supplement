@@ -1,16 +1,16 @@
 
-Last Updated on 2024-08-21
+Last Updated on 2024-08-22
 
-# Supplementary Material
+# Supporting Information
 
-This repository contains the supplementary information for:
-**Comparative analysis of proteomic expression between oesophageal
-adenocarcinoma and normal adjacent tissue**.
+This repository contains the supporting information for: **Comparative
+analysis of proteomic expression between oesophageal adenocarcinoma and
+normal adjacent tissue**.
 
 This comprises of the materials and methods in
 `oac-globals-methods-2024-08-20.pdf`, Figure S1, Tables S1-S4 as `csv`
 files, and the prediction of the effect of the G95R mutation on NOP58
-using DDGun below.
+using DDGun ([1](#ref-montanucci2019)) below.
 
 The column names and contents of the `csv` files in the `tables` folder
 are described below.
@@ -59,7 +59,7 @@ Patient information
 ## Peaks normalised Top 3 peptide intensities
 
 Label free quantification using the Peaks Q module of Peaks Studio
-([1](#ref-zhang2012),[2](#ref-lin2013)) yielding matrices of protein
+([2](#ref-zhang2012),[3](#ref-lin2013)) yielding matrices of protein
 identifications as quantified by their normalised top 3 peptide
 intensities.
 
@@ -85,7 +85,7 @@ Peaks normalised top 3 peptide intensities Table information
 The normalised top 3 peptide intensities were filtered to remove any
 proteins for which there were more than two missing values across the
 samples. Differential protein expression (DEP) was then calculated with
-DEqMS using the default steps ([3](#ref-deqms)).
+DEqMS using the default steps ([4](#ref-deqms)).
 
 Tables S3 contain the output of DEqMS.
 
@@ -115,7 +115,7 @@ DEqMS Table information
 
 ## Functional analysis with g:Profiler
 
-Functional enrichment analysis used g:Profiler ([4](#ref-kolberg2020))
+Functional enrichment analysis used g:Profiler ([5](#ref-kolberg2020))
 using default settings for homo sapiens modified to exclude GO
 electronic annotations. Protein identifiers were used as inputs for
 DEPs.
@@ -217,11 +217,11 @@ the corresponding term</td>
 
 g:Profiler Table information
 
-## NOP58 G95R mutation protein stability prediction
+## NOP58 G95R mutation DDGun protein stability prediction
 
 The effect of the G95R mutation on Nucleolar protein 58 (NOP58) was
 predicted using <a href="#0" style="font-size: 12pt;">DDGun</a>
-([5](#ref-montanucci2019)).
+([1](#ref-montanucci2019)).
 
 The output of the prediction using the amino acid sequence is showing
 how G95R decreases the stability of NOP58 is shown below:
@@ -243,31 +243,31 @@ how G95R decreases the stability of NOP58 is shown below:
 ## References
 
 <span class="csl-left-margin">1.
-</span><span class="csl-right-inline">Zhang J, Xin L, Shan B, Chen W,
-Xie M, Yuen D, et al. PEAKS DB: De novo sequencing assisted database
-search for sensitive and accurate peptide identification. Molecular &
-Cellular Proteomics. 2012;11(4):M111010587. </span>
-
-<span class="csl-left-margin">2.
-</span><span class="csl-right-inline">Lin H, He L, Ma B. A combinatorial
-approach to the peptide feature matching problem for label-free
-quantification. Bioinformatics \[Internet\]. 2013 May 10;29(14):1768–75.
-Available from: <http://dx.doi.org/10.1093/bioinformatics/btt274></span>
-
-<span class="csl-left-margin">3.
-</span><span class="csl-right-inline">DEqMS \[Internet\]. Available
-from: <http://bioconductor.org/packages/DEqMS/></span>
-
-<span class="csl-left-margin">4.
-</span><span class="csl-right-inline">Kolberg L, Raudvere U, Kuzmin I,
-Vilo J, Peterson H. gprofiler2 – an R package for gene list functional
-enrichment analysis and namespace conversion toolset g:Profiler.
-F1000Research \[Internet\]. 2020 Nov 17;9:709. Available from:
-<http://dx.doi.org/10.12688/f1000research.24956.2></span>
-
-<span class="csl-left-margin">5.
 </span><span class="csl-right-inline">Montanucci L, Capriotti E, Frank
 Y, Ben-Tal N, Fariselli P. DDGun: an untrained method for the prediction
 of protein stability changes upon single and multiple point variations.
 BMC Bioinformatics \[Internet\]. 2019 Jul;20(S14). Available from:
 <http://dx.doi.org/10.1186/s12859-019-2923-1></span>
+
+<span class="csl-left-margin">2.
+</span><span class="csl-right-inline">Zhang J, Xin L, Shan B, Chen W,
+Xie M, Yuen D, et al. PEAKS DB: De novo sequencing assisted database
+search for sensitive and accurate peptide identification. Molecular &
+Cellular Proteomics. 2012;11(4):M111010587. </span>
+
+<span class="csl-left-margin">3.
+</span><span class="csl-right-inline">Lin H, He L, Ma B. A combinatorial
+approach to the peptide feature matching problem for label-free
+quantification. Bioinformatics \[Internet\]. 2013 May 10;29(14):1768–75.
+Available from: <http://dx.doi.org/10.1093/bioinformatics/btt274></span>
+
+<span class="csl-left-margin">4.
+</span><span class="csl-right-inline">DEqMS \[Internet\]. Available
+from: <http://bioconductor.org/packages/DEqMS/></span>
+
+<span class="csl-left-margin">5.
+</span><span class="csl-right-inline">Kolberg L, Raudvere U, Kuzmin I,
+Vilo J, Peterson H. gprofiler2 – an R package for gene list functional
+enrichment analysis and namespace conversion toolset g:Profiler.
+F1000Research \[Internet\]. 2020 Nov 17;9:709. Available from:
+<http://dx.doi.org/10.12688/f1000research.24956.2></span>
