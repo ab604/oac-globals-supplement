@@ -5,3 +5,5 @@
 *.csl
 *.bib
 *.docx
+*.pdf
+figures/*

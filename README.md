@@ -1,5 +1,5 @@
 
-Last Updated on 2024-08-22
+Last Updated on 2024-09-19
 
 # Supporting Information
 
@@ -9,32 +9,12 @@ This repository contains the supporting information for: **Comparative
 analysis of proteomic expression between oesophageal adenocarcinoma and
 normal adjacent tissue**.
 
-This comprises of the materials and methods in
-`oac-globals-methods-2024-08-22.pdf`, Figure S1, Tables S1-S4 as `csv`
-files, and the prediction of the effect of the G95R mutation on NOP58
-using DDGun ([1](#ref-montanucci2019)) below.
+This comprises Tables S1-S4 as `csv` files, and the prediction of the
+effect of the G95R mutation on NOP58 using DDGun
+([1](#ref-montanucci2019)) below.
 
 The column names and contents of the `csv` files in the `tables` folder
 are described below.
-
-## Figure S1 - Principal Component Analysis
-
-<figure>
-
-<strong>A</strong>
-<img src="figures/Figure-S1A-2024-07-18.png" alt="Figure S1 (A) PCA of normalised top 3 peptide intensities of 500 most variable proteins. OAC (red) &amp; NAT (grey). Samples are numbered with donor identifier."/>
-<strong>B</strong>
-<img src="figures/Figure-S1B-2024-07-18.png" alt="Figure S1 (B) Scree plot of principal components."/>
-
-<figcaption aria-hidden="true">
-
-Figure S1 <strong>(A)</strong> PCA of normalised top 3 peptide
-intensities of 500 most variable proteins. OAC (red) & NAT (grey).
-Samples are numbered with donor identifier. <strong>(B)</strong> Scree
-plot of principal components.
-
-</figcaption>
-</figure>
 
 ## Patient Information
 
