@@ -1,7 +1,6 @@
-
-Last Updated on 2024-09-19
-
 # Supporting Information
+
+Last Updated on 2024-11-28
 
 [![](https://zenodo.org/badge/837544982.svg)](https://zenodo.org/doi/10.5281/zenodo.13358758)
 
@@ -18,12 +17,12 @@ are described below.
 
 ## Patient Information
 
-Table S1 contains the patient information for the 7 male donors in this
+S1 Table contains the patient information for the 7 male donors in this
 study.
 
                       File                                  
                     ────────────────────────────────────────
-                      Table-S1-OAC-Patient-Information.csv  
+                      S1-Table-OAC-Patient-Information.csv  
                     ────────────────────────────────────────
 
 Column names: File
@@ -45,11 +44,11 @@ Label free quantification using the Peaks Q module of Peaks Studio
 identifications as quantified by their normalised top 3 peptide
 intensities.
 
-Tables S2 contain normalised top 3 peptide intensities.
+S2 Table contain normalised top 3 peptide intensities.
 
            File                                                        
          ──────────────────────────────────────────────────────────────
-           Table-S2-OAC-Peaks-Normalised-Top3-Peptide-Intensities.csv  
+           S2-Table-OAC-Peaks-Normalised-Top3-Peptide-Intensities.csv  
          ──────────────────────────────────────────────────────────────
 
 Column names: File
@@ -69,13 +68,13 @@ proteins for which there were more than two missing values across the
 samples. Differential protein expression (DEP) was then calculated with
 DEqMS using the default steps ([4](#ref-deqms)).
 
-Tables S3 contain the output of DEqMS. A negative `logFC` indicates
+S3 Table contain the output of DEqMS. A negative `logFC` indicates
 higher expresssion in OAC tissue and a postive `logFC` indicates higher
 expression in NAT.
 
                          File                            
                        ──────────────────────────────────
-                         Table-S3-OAC-DEqMS-Results.csv  
+                         S3-Table-OAC-DEqMS-Results.csv  
                        ──────────────────────────────────
 
 Column names: File
@@ -104,11 +103,11 @@ using default settings for homo sapiens modified to exclude GO
 electronic annotations. Protein identifiers were used as inputs for
 DEPs.
 
-Tables S4 contain the g:Profiler outputs.
+S4 Table contain the g:Profiler outputs.
 
                        File                                
                      ──────────────────────────────────────
-                       Table-S4-OAC-gProfiler-Results.csv  
+                       S4-Table-OAC-gProfiler-Results.csv  
                      ──────────────────────────────────────
 
 Column names: File
