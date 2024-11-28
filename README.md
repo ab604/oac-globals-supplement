@@ -109,7 +109,6 @@ S4 Table contain the g:Profiler outputs.
 
 
 <table>
-<caption>g:Profiler Table information</caption>
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 84%" />
@@ -193,7 +192,7 @@ the corresponding term</td>
 </tr>
 </tbody>
 </table>
-
+<caption>g:Profiler Table information</caption>
 
 ## NOP58 G95R mutation DDGun protein stability prediction
 
