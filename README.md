@@ -25,7 +25,6 @@ study.
                       S1-Table-OAC-Patient-Information.csv  
                     ────────────────────────────────────────
 
-Column names: File
 
 | Column name          | Description                 |
 |----------------------|-----------------------------|
@@ -51,7 +50,6 @@ S2 Table contain normalised top 3 peptide intensities.
            S2-Table-OAC-Peaks-Normalised-Top3-Peptide-Intensities.csv  
          ──────────────────────────────────────────────────────────────
 
-Column names: File
 
 | Column name | Description |
 |-----------------------------------------------|-------------------------|
@@ -77,7 +75,6 @@ expression in NAT.
                          S3-Table-OAC-DEqMS-Results.csv  
                        ──────────────────────────────────
 
-Column names: File
 
 | Column name    | Description                                    |
 |----------------|------------------------------------------------|
@@ -110,7 +107,6 @@ S4 Table contain the g:Profiler outputs.
                        S4-Table-OAC-gProfiler-Results.csv  
                      ──────────────────────────────────────
 
-Column names: File
 
 <table>
 <caption>g:Profiler Table information</caption>
@@ -198,7 +194,6 @@ the corresponding term</td>
 </tbody>
 </table>
 
-g:Profiler Table information
 
 ## NOP58 G95R mutation DDGun protein stability prediction
 
