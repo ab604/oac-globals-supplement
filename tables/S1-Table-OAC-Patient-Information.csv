@@ -1,4 +1,4 @@
-donor_id,age_at_diagnosis,sex,location_of_tumour,treatment_modality
+anonymised_donor_id,age_at_diagnosis,sex,location_of_tumour,treatment_modality
 EN-181-11,64,Male,Gastro-Oesophageal junction (Siewert II),Surgery
 EN-216-11,74,Male,Lower Oesophagus,Surgery
 EN-430-11,78,Male,Lower Oesophagus,Chemotherapy + Surgery

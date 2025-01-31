@@ -1,6 +1,6 @@
 # Supporting Information
 
-Last Updated on 2024-11-28
+Last Updated on 2025-01-31
 
 [![](https://zenodo.org/badge/837544982.svg)](https://zenodo.org/doi/10.5281/zenodo.13358758)
 
@@ -25,14 +25,15 @@ study.
                       S1-Table-OAC-Patient-Information.csv  
                     ────────────────────────────────────────
 
+Column names: File
 
-| Column name          | Description                 |
-|----------------------|-----------------------------|
-| `donor_id`           | Donor identifier            |
-| `age_at_diagnosis`   | Age of patient at diagnosis |
-| `sex`                | Sex of patient              |
-| `location_of_tumour` | Location of tumour          |
-| `treatment_modality` | Treatment modality          |
+| Column name           | Description                 |
+|-----------------------|-----------------------------|
+| `anonymised_donor_id` | Anonymised Donor identifier |
+| `age_at_diagnosis`    | Age of patient at diagnosis |
+| `sex`                 | Sex of patient              |
+| `location_of_tumour`  | Location of tumour          |
+| `treatment_modality`  | Treatment modality          |
 
 Patient information
 
@@ -50,6 +51,7 @@ S2 Table contain normalised top 3 peptide intensities.
            S2-Table-OAC-Peaks-Normalised-Top3-Peptide-Intensities.csv  
          ──────────────────────────────────────────────────────────────
 
+Column names: File
 
 | Column name | Description |
 |-----------------------------------------------|-------------------------|
@@ -75,6 +77,7 @@ expression in NAT.
                          S3-Table-OAC-DEqMS-Results.csv  
                        ──────────────────────────────────
 
+Column names: File
 
 | Column name    | Description                                    |
 |----------------|------------------------------------------------|
@@ -107,92 +110,93 @@ S4 Table contain the g:Profiler outputs.
                        S4-Table-OAC-gProfiler-Results.csv  
                      ──────────────────────────────────────
 
+Column names: File
 
 <table>
+<caption>g:Profiler Table information</caption>
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 84%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>Column name</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>query</code></td>
 <td>the name of the input query</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>significant</code></td>
 <td>indicator for statistically significant results</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>p_value</code></td>
 <td>hypergeometric p-value after correction for multiple testing</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>term_size</code></td>
 <td>number of genes that are annotated to the term</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>query_size</code></td>
 <td>number of genes that were included in the query</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>intersection_size</code></td>
 <td>the number of genes in the input query that are annotated to the
 corresponding term</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>precision</code></td>
 <td>the proportion of genes in the input list that are annotated to the
 function (defined as intersection_size/query_size)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>recall</code></td>
 <td>the proportion of functionally annotated genes that the query
 recovers (defined as intersection_size/term_size)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>term_id</code></td>
 <td>unique term identifier</td>
 </tr>
-<tr class="even">
+<tr>
 <td><p><code>source</code></p>
 <p><code>term_name</code></p></td>
 <td>the abbreviation of the data source for the term (e.g. GO:BP)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>effective_domain_size</code></td>
 <td>the total number of genes “in the universe” used for the
 hypergeometric test</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>source_order</code></td>
 <td>numeric order for the term within its data source</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>parents</code></td>
 <td>list of term IDs that are hierarchically directly above the term.
 For non-hierarchical data sources this points to an artificial root
 node.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>evidence_codes</code></td>
 <td>a lists of all evidence codes for the intersecting genes between
 input and the term. The evidences are separated by comma for each
 gene.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>intersection</code></td>
 <td>a comma separated list of genes from the query that are annotated to
 the corresponding term</td>
 </tr>
 </tbody>
 </table>
-<caption>g:Profiler Table information</caption>
 
 ## NOP58 G95R mutation DDGun protein stability prediction
 
